@@ -12,3 +12,5 @@ export { default as Financial } from "./Charts/Financial";
 export { default as Line } from "./Charts/Line";
 export { default as Pyrmind } from "./Charts/Pyrmind";
 export { default as Stacked } from "./Charts/Stacked";
+export { default as Employees } from "./Employees";
+export { default as Pie } from "./Charts/Pie";
