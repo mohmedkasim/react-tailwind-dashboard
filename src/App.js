@@ -26,7 +26,7 @@ import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const {activeMenu } = useStateContext();
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -56,35 +56,38 @@ const App = () => {
               activeMenu ? "md:ml-72 w-full" : "w-full flex-2"
             }`}
           >
-            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full"><Navbar/></div>
-          </div>
-          <div>
-            <Routes>
-              {/* Dashboard */}
-              <Route path="/" elementName={<Ecommerce />} />
-              <Route path="/company" elementName={<Ecommerce />} />
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
+              <Navbar />
+            </div>
 
-              {/* Pages */}
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/employees" element={<Employees />} />
-              <Route path="/customers" element={<Customers />} />
+            <div>
+              <Routes>
+                {/* Dashboard */}
+                <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} />
 
-              {/* apps  */}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
+                {/* Pages */}
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/employees" element={<Employees />} />
+                <Route path="/customers" element={<Customers />} />
 
-              {/* charts  */}
-              <Route path="/line" element={<Line />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
-              <Route path="/pyrmind" element={<Pyrmind />} />
-              <Route path="/stacked" element={<Stacked />} />
-            </Routes>
+                {/* apps  */}
+                <Route path="/kanban" element={<Kanban />} />
+                <Route path="/editor" element={<Editor />} />
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/color-picker" element={<ColorPicker />} />
+
+                {/* charts  */}
+                <Route path="/line" element={<Line />} />
+                <Route path="/area" element={<Area />} />
+                <Route path="/bar" element={<Bar />} />
+                <Route path="/pie" element={<Pie />} />
+                <Route path="/financial" element={<Financial />} />
+                <Route path="/color-mapping" element={<ColorMapping />} />
+                <Route path="/pyrmind" element={<Pyrmind />} />
+                <Route path="/stacked" element={<Stacked />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>
