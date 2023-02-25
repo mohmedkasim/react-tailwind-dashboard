@@ -41,7 +41,7 @@ const Pie = ({ id, data, legendVisiblity, height }) => {
           explode
           explodeOffset="10%"
           explodeIndex={2}
-          datalabel={{
+          dataLabel={{
             visible: true,
             position: "Inside",
             name: "text",
